@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build & Cache
+build/
+dist/
+.cache/
+*.log
+
+# Environment Variables (Rahasia)
+.env
+.env.local
+.env.production
+
+# Docker & Data
+data/
+volumes/
+*.pid
+
+# Sistem Operasi
+.DS_Store
+Thumbs.db

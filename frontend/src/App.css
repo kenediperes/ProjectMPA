@@ -1,0 +1,18 @@
+/* App-level custom styles */
+/* Most styling is in styles/global.css, this is for any app-specific overrides */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: loading splash */
+.splash-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}

@@ -1,0 +1,208 @@
+/home/nitesane98/Documents/ProjectMPA/
+├── backend
+│   ├── .env
+│   ├── migrations
+│   │   ├── 001_create_users_table.sql
+│   │   ├── 002_create_customers_table.sql
+│   │   ├── 003_create_suppliers_table.sql
+│   │   ├── 004_create_products_table.sql
+│   │   ├── 005_create_sales_tables.sql
+│   │   ├── 006_create_purchase_tables.sql
+│   │   ├── 007_create_service_tables.sql
+│   │   ├── 008_create_work_order_tables.sql
+│   │   ├── 009_create_quality_control_tables.sql
+│   │   ├── 010_create_invoice_tables.sql
+│   │   ├── 011_create_notification_tables.sql
+│   │   └── 012_create_inventory_transactions.sql
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── seeds
+│   │   ├── 001_initial_users.sql
+│   │   └── 002_sample_data.sql
+│   ├── server.js
+│   └── src
+│       ├── app.js
+│       ├── config
+│       │   ├── database.js
+│       │   └── jwt.js
+│       ├── controllers
+│       │   ├── authController.js
+│       │   ├── productController.js
+│       │   ├── purchaseController.js
+│       │   ├── qualityControlController.js
+│       │   ├── salesController.js
+│       │   ├── serviceController.js
+│       │   └── workOrderController.js
+│       ├── middleware
+│       │   ├── auth.js
+│       │   └── errorHandler.js
+│       ├── models
+│       │   ├── Invoice.js
+│       │   ├── Notification.js
+│       │   ├── PurchaseOrder.js
+│       │   ├── QualityControl.js
+│       │   ├── ServiceOrder.js
+│       │   └── WorkOrder.js
+│       ├── routes
+│       │   ├── app.js
+│       │   ├── authRoutes.js
+│       │   ├── invoiceRoutes.js
+│       │   ├── notificationRoutes.js
+│       │   ├── productRoutes.js
+│       │   ├── purchaseRoutes.js
+│       │   ├── qualityControlRoutes.js
+│       │   ├── reportRoutes.js
+│       │   ├── salesRoutes.js
+│       │   ├── serviceRoutes.js
+│       │   └── workOrderRoutes.js
+│       └── utils
+│           ├── emailService.js
+│           ├── helpers.js
+│           └── validators.js
+├── docker
+│   ├── docker-compose.yml
+│   ├── Dockerfile.backend
+│   └── Dockerfile.frontend
+├── docs
+│   ├── api
+│   │   ├── authentication.md
+│   │   ├── products.md
+│   │   ├── purchases.md
+│   │   ├── reports.md
+│   │   └── sales.md
+│   ├── database
+│   │   ├── erd.png
+│   │   └── schema.md
+│   └── user-guide
+│       ├── getting-started.md
+│       ├── inventory.md
+│       └── sales-process.md
+├── Enable Gzip Compression.txt
+├── ERP_Flowchart_Fixed.drawio.pdf
+├── ErpSystemStc.txt
+├── frontend
+│   ├── .env
+│   ├── .gitignore
+│   ├── nginx.conf
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   ├── favicon.ico
+│   │   └── index.html
+│   ├── README.md
+│   └── src
+│       ├── api
+│       │   ├── auth.js
+│       │   ├── index.js
+│       │   ├── invoices.js
+│       │   ├── products.js
+│       │   ├── purchases.js
+│       │   ├── reports.js
+│       │   ├── sales.js
+│       │   └── services.js
+│       ├── App.css
+│       ├── App.js
+│       ├── components
+│       │   ├── common
+│       │   │   ├── ErrorBoundary.js
+│       │   │   ├── Layout.js
+│       │   │   ├── LoadingSpinner.js
+│       │   │   ├── Pagination.js
+│       │   │   ├── PrivateRoute.js
+│       │   │   └── SearchBar.js
+│       │   ├── customers
+│       │   │   ├── CustomerForm.js
+│       │   │   └── CustomerList.js
+│       │   ├── dashboard
+│       │   │   ├── DashboardStats.js
+│       │   │   ├── QuickActions.js
+│       │   │   ├── RecentActivities.js
+│       │   │   └── StockAlerts.js
+│       │   ├── invoices
+│       │   │   ├── InvoiceForm.js
+│       │   │   ├── InvoiceList.js
+│       │   │   ├── InvoicePayment.js
+│       │   │   └── InvoiceStatus.js
+│       │   ├── notifications
+│       │   │   ├── NotificationBell.js
+│       │   │   ├── NotificationItem.js
+│       │   │   └── NotificationList.js
+│       │   ├── products
+│       │   │   ├── ProductCard.js
+│       │   │   ├── ProductForm.js
+│       │   │   ├── ProductList.js
+│       │   │   └── StockManagement.js
+│       │   ├── purchases
+│       │   │   ├── PurchaseOrderForm.js
+│       │   │   ├── PurchaseOrderList.js
+│       │   │   ├── SupplierApproval.js
+│       │   │   ├── SupplierForm.js
+│       │   │   └── SupplierList.js
+│       │   ├── quality-control
+│       │   │   ├── QCForm.js
+│       │   │   ├── QCList.js
+│       │   │   └── QCResult.js
+│       │   ├── reports
+│       │   │   ├── FinancialReport.js
+│       │   │   ├── InventoryReport.js
+│       │   │   ├── ReportCharts.js
+│       │   │   ├── ReportFilters.js
+│       │   │   └── SalesReport.js
+│       │   ├── sales
+│       │   │   ├── SalesOrderForm.js
+│       │   │   ├── SalesOrderList.js
+│       │   │   ├── SalesQuotationForm.js
+│       │   │   └── SalesQuotationList.js
+│       │   ├── services
+│       │   │   ├── ServiceOrderForm.js
+│       │   │   ├── ServiceOrderList.js
+│       │   │   └── TaskAssignment.js
+│       │   └── work-orders
+│       │       ├── ProductionStatus.js
+│       │       ├── WorkOrderForm.js
+│       │       └── WorkOrderList.js
+│       ├── contexts
+│       │   ├── AuthContext.js
+│       │   ├── index.js
+│       │   ├── NotificationContext.js
+│       │   └── ThemeContext.js
+│       ├── hooks
+│       │   ├── index.js
+│       │   ├── useApi.js
+│       │   ├── useAuth.js
+│       │   ├── useLocalStorage.js
+│       │   └── useNotification.js
+│       ├── index.css
+│       ├── index.js
+│       ├── pages
+│       │   ├── Customers.js
+│       │   ├── Dashboard.js
+│       │   ├── Invoices.js
+│       │   ├── Login.js
+│       │   ├── Products.js
+│       │   ├── Profile.js
+│       │   ├── PurchaseOrders.js
+│       │   ├── QualityControl.js
+│       │   ├── Reports.js
+│       │   ├── SalesOrders.js
+│       │   ├── SalesQuotations.js
+│       │   ├── ServiceOrders.js
+│       │   ├── Settings.js
+│       │   ├── Suppliers.js
+│       │   └── WorkOrders.js
+│       ├── styles
+│       │   ├── global.css
+│       │   ├── theme.js
+│       │   └── variables.css
+│       └── utils
+│           ├── constants.js
+│           ├── formatters.js
+│           ├── helpers.js
+│           └── validators.js
+├── package.json
+├── package-lock.json
+├── README.md
+└── scripts
+    ├── backup.sh
+    ├── restore.sh
+    └── seed-database.js

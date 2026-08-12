@@ -1,0 +1,119 @@
+nitesane98@pantheon98:~$ cd /Documents/ProjectMPA/
+bash: cd: /Documents/ProjectMPA/: No such file or directory
+nitesane98@pantheon98:~$ cd Documents/ProjectMPA/
+nitesane98@pantheon98:~/Documents/ProjectMPA$ chmod +x scripts/deploy.sh
+nitesane98@pantheon98:~/Documents/ProjectMPA$ chmod +x scripts/backup.sh
+nitesane98@pantheon98:~/Documents/ProjectMPA$ chmod +x scripts/restore.sh
+nitesane98@pantheon98:~/Documents/ProjectMPA$ ./scripts/deploy.sh --seed
+========================================
+    ProjectMPA Deployment Script
+========================================
+Creating necessary directories...
+Building and starting containers...
+WARN[0000] The "EMAIL_PORT" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_HOST" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_PASS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_USER" variable is not set. Defaulting to a blank string.
+WARN[0000] The "WHATSAPP_API_KEY" variable is not set. Defaulting to a blank string.
+WARN[0000] The "TELEGRAM_CHAT_ID" variable is not set. Defaulting to a blank string.
+WARN[0000] The "TELEGRAM_BOT_TOKEN" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_PORT" variable is not set. Defaulting to a blank string.
+WARN[0000] The "TELEGRAM_BOT_TOKEN" variable is not set. Defaulting to a blank string.
+WARN[0000] The "TELEGRAM_CHAT_ID" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_HOST" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_USER" variable is not set. Defaulting to a blank string.
+WARN[0000] The "EMAIL_PASS" variable is not set. Defaulting to a blank string.
+WARN[0000] The "WHATSAPP_API_KEY" variable is not set. Defaulting to a blank string.
+[+] Building 93.0s (23/25)
+ => [internal] load local bake definitions                                                                                                                                                                                              0.0s
+ => => reading from stdin 1.05kB                                                                                                                                                                                                        0.0s
+ => [frontend internal] load build definition from Dockerfile.frontend                                                                                                                                                                  0.1s
+ => => transferring dockerfile: 869B                                                                                                                                                                                                    0.0s
+ => [backend internal] load build definition from Dockerfile.backend                                                                                                                                                                    0.1s
+ => => transferring dockerfile: 750B                                                                                                                                                                                                    0.0s
+ => [frontend internal] load metadata for docker.io/library/node:18-alpine                                                                                                                                                              4.3s
+ => [frontend internal] load metadata for docker.io/library/nginx:alpine                                                                                                                                                                4.3s
+ => [backend internal] load .dockerignore                                                                                                                                                                                               0.0s
+ => => transferring context: 2B                                                                                                                                                                                                         0.0s
+ => [backend internal] load build context                                                                                                                                                                                               0.2s
+ => => transferring context: 154.59kB                                                                                                                                                                                                   0.0s
+ => [frontend builder 1/4] FROM docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e                                                                                                0.4s
+ => => resolve docker.io/library/node:18-alpine@sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e                                                                                                                 0.1s
+ => [frontend internal] load build context                                                                                                                                                                                              0.2s
+ => => transferring context: 1.10MB                                                                                                                                                                                                     0.1s
+ => [frontend stage-1 1/3] FROM docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752                                                                                                 27.7s
+ => => resolve docker.io/library/nginx:alpine@sha256:4a73073bd557c65b759505da037898b61f1be6cbcc3c2c3aeac22d2a470c1752                                                                                                                   0.1s
+ => => sha256:46519e7231d2eb5604df229beb44d59719a489eaa7aca52982535a010b07a9ed 20.31MB / 20.31MB                                                                                                                                       26.2s
+ => => sha256:390dc935348d8070e695fbaae2a4bb114fb9e69c59f628e7576036ee9d5244c9 1.40kB / 1.40kB                                                                                                                                          0.9s
+ => => sha256:d0008c891db48b5f526d914bce9e8d889fe1a9d1f08291ae03fe97f871726f38 1.21kB / 1.21kB                                                                                                                                          1.1s
+ => => sha256:46f977ee452f4399c208714afa034868d6056864f8a0cf3c643ab143dd802c80 404B / 404B                                                                                                                                              1.3s
+ => => sha256:62bec68d7c31c4c8a19d812d84da5f7748e54690c037979945b6c5b6c924b142 957B / 957B                                                                                                                                              0.5s
+ => => sha256:1223f016b4e4a2c21f7c49d4837fbfd47a9da6436b511690ca1e582fc2810d59 627B / 627B                                                                                                                                              0.4s
+ => => sha256:3cd534fe98c64d68a1f4f1c83abb8d5cba7ecfd7be88e592389929d12e6253da 1.89MB / 1.89MB                                                                                                                                          5.5s
+ => => sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4 3.85MB / 3.85MB                                                                                                                                          7.1s
+ => => extracting sha256:55afa1ecc21d2bb5e5045f32dafee56272ffd89860bac26f6c32123439af26a4                                                                                                                                               0.3s
+ => => extracting sha256:3cd534fe98c64d68a1f4f1c83abb8d5cba7ecfd7be88e592389929d12e6253da                                                                                                                                               0.2s
+ => => extracting sha256:1223f016b4e4a2c21f7c49d4837fbfd47a9da6436b511690ca1e582fc2810d59                                                                                                                                               0.0s
+ => => extracting sha256:62bec68d7c31c4c8a19d812d84da5f7748e54690c037979945b6c5b6c924b142                                                                                                                                               0.0s
+ => => extracting sha256:46f977ee452f4399c208714afa034868d6056864f8a0cf3c643ab143dd802c80                                                                                                                                               0.0s
+ => => extracting sha256:d0008c891db48b5f526d914bce9e8d889fe1a9d1f08291ae03fe97f871726f38                                                                                                                                               0.0s
+ => => extracting sha256:390dc935348d8070e695fbaae2a4bb114fb9e69c59f628e7576036ee9d5244c9                                                                                                                                               0.0s
+ => => extracting sha256:46519e7231d2eb5604df229beb44d59719a489eaa7aca52982535a010b07a9ed                                                                                                                                               0.9s
+ => [backend builder 2/4] WORKDIR /app                                                                                                                                                                                                  0.1s
+ => [frontend builder 3/6] COPY frontend/package*.json ./                                                                                                                                                                               0.2s
+ => [backend stage-1 3/6] RUN apk add --no-cache dumb-init                                                                                                                                                                              6.1s
+ => [backend builder 3/4] COPY backend/package*.json ./                                                                                                                                                                                 0.2s
+ => [backend builder 4/4] RUN npm ci --only=production && npm cache clean --force                                                                                                                                                      11.1s
+ => [frontend builder 4/6] RUN npm ci && npm cache clean --force                                                                                                                                                                       65.5s
+ => [backend stage-1 4/6] COPY --from=builder /app/node_modules ./node_modules                                                                                                                                                          0.9s
+ => [backend stage-1 5/6] COPY backend/ .                                                                                                                                                                                               0.1s
+ => [backend stage-1 6/6] RUN mkdir -p uploads logs                                                                                                                                                                                     0.5s
+ => [backend] exporting to image                                                                                                                                                                                                        4.6s
+ => => exporting layers                                                                                                                                                                                                                 3.0s
+ => => exporting manifest sha256:4d04c4a89fc08035faaa1155cac8b45d9ac7b724dc1181ac260b30ff3846002e                                                                                                                                       0.0s
+ => => exporting config sha256:fb2c8f109e7dbaea827256440f555b922ee3fe3a25ebc37d0d5baa0cf04a1603                                                                                                                                         0.0s
+ => => exporting attestation manifest sha256:337810707a6dfcba1d63711c9ac40eba5cd6f7a4698ff087442c7a85cfc2c8c1                                                                                                                           0.1s
+ => => exporting manifest list sha256:61e249868dbc16b4fd731d8585616849c872c22342ee4a402c0f02c09adc82e3                                                                                                                                  0.0s
+ => => naming to docker.io/library/docker-backend:latest                                                                                                                                                                                0.0s
+ => => unpacking to docker.io/library/docker-backend:latest                                                                                                                                                                             1.3s
+ => [backend] resolving provenance for metadata file                                                                                                                                                                                    0.0s
+ => [frontend builder 5/6] COPY frontend/ .                                                                                                                                                                                             0.9s
+ => ERROR [frontend builder 6/6] RUN npm run build                                                                                                                                                                                     21.3s
+------
+ > [frontend builder 6/6] RUN npm run build:
+0.669
+0.669 > erp-frontend@1.0.0 build
+0.669 > react-scripts build
+0.669
+3.257 Creating an optimized production build...
+21.11 Failed to compile.
+21.11
+21.11 Module not found: Error: Can't resolve '@emotion/styled' in '/app/node_modules/@mui/styled-engine'
+21.11
+21.11
+------
+[+] build 0/2
+ ⠙ Image docker-backend  Building                                                                                                                                                                                                       93.1s
+ ⠙ Image docker-frontend Building                                                                                                                                                                                                       93.1s
+Dockerfile.frontend:18
+
+--------------------
+
+  16 |
+
+  17 |     # Build the application
+
+  18 | >>> RUN npm run build
+
+  19 |
+
+  20 |     # Production stage with Nginx
+
+--------------------
+
+target frontend: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+
+nitesane98@pantheon98:~/Documents/ProjectMPA$ git pull ./scripts/deploy.sh
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+nitesane98@pantheon98:~/Documents/ProjectMPA$

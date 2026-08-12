@@ -1,0 +1,34 @@
+# /home/nitesane98/Documents/ProjectMPA/docker/Dockerfile.backend
+
+# Multi-stage build for backend
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY backend/package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production && npm cache clean --force
+
+# Production stage
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install dumb-init for proper signal handling
+RUN apk add --no-cache dumb-init
+
+# Copy dependencies and source
+COPY --from=builder /app/node_modules ./node_modules
+COPY backend/ .
+
+# Create necessary directories
+RUN mkdir -p uploads logs
+
+# Set user
+USER node
+
+EXPOSE 5000
+
+CMD ["dumb-init", "node", "server.js"]

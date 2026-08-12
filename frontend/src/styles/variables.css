@@ -1,0 +1,72 @@
+/* ============================================
+   CSS Variables – Light & Dark Themes
+   ============================================ */
+
+:root {
+  /* ---- Colors (Light) ---- */
+  --color-primary: #2c3e50;
+  --color-primary-light: #34495e;
+  --color-primary-dark: #1a252f;
+  --color-secondary: #3498db;
+  --color-secondary-light: #5dade2;
+  --color-accent: #e67e22;
+  --color-success: #27ae60;
+  --color-warning: #f1c40f;
+  --color-danger: #e74c3c;
+  --color-info: #1abc9c;
+
+  --color-bg: #f4f6f9;
+  --color-bg-card: #ffffff;
+  --color-bg-input: #ffffff;
+  --color-text: #2c3e50;
+  --color-text-secondary: #7f8c8d;
+  --color-border: #dce1e8;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+
+  /* ---- Typography ---- */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-base: 16px;
+  --font-size-small: 0.875rem;
+  --font-size-large: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --line-height: 1.6;
+
+  /* ---- Spacing ---- */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* ---- Border radius ---- */
+  --border-radius: 6px;
+  --border-radius-lg: 12px;
+
+  /* ---- Transitions ---- */
+  --transition-speed: 0.3s;
+}
+
+/* ===== Dark Theme ===== */
+[data-theme="dark"] {
+  --color-bg: #1e272e;
+  --color-bg-card: #2f3640;
+  --color-bg-input: #3d4a57;
+  --color-text: #dcdde1;
+  --color-text-secondary: #a4b0be;
+  --color-border: #4a5a6a;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+
+  --color-primary: #dcdde1;
+  --color-primary-light: #a4b0be;
+  --color-primary-dark: #7f8c8d;
+  --color-secondary: #4a90d9;
+  --color-secondary-light: #6aa9e6;
+  --color-accent: #f39c12;
+  --color-success: #2ecc71;
+  --color-warning: #f1c40f;
+  --color-danger: #e74c3c;
+  --color-info: #1abc9c;
+}
